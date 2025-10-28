@@ -16,7 +16,7 @@ int main()
 	
 	for(int i=0;i<num_movies;i++)
 	{
-		cout<<" Enter the title of movie #"+ (i+1)<<": ";
+		cout<<" Enter the title of movie #"<< (i+1)<<": ";
 		getline(cin,temptitle);
 		
 		cout<<"Enter the rating for \""<<temptitle<<"\"(1-10):";
