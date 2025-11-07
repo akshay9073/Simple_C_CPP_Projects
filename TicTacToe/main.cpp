@@ -11,6 +11,7 @@ void initalizeGameBoard(string gameBoard[][COLS]);
 void printCurrentBoard(string gameBoard[][COLS]);
 void getUserInput(bool xTurn,string gameBoard[][COLS]);
 bool cellAlreadyOccupied(int,int,string gameBoard[][COLS]);
+bool isBoardFull(string gameBoard[][COLS]);
 
 int main()
 {
@@ -159,4 +160,18 @@ string getWinner(string gameBoard[ROWS][COLS])
 		return "";
 }
 
-
+bool isBoardFull(string gameBoard[ROWS][COLS])
+{
+	int countFill=0;
+	for(int i=0;i<ROWS;i++)
+	{
+		for(int j=0;j<COLS;j++)
+		{
+			if(gameBoard[i][j]!=" ")
+			{
+				countFill++;
+			}
+		}
+	}
+	return countFill==9;
+}
