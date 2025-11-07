@@ -12,6 +12,7 @@ void printCurrentBoard(string gameBoard[][COLS]);
 void getUserInput(bool xTurn,string gameBoard[][COLS]);
 bool cellAlreadyOccupied(int,int,string gameBoard[][COLS]);
 bool isBoardFull(string gameBoard[][COLS]);
+string getWinner(string gameBoard[][COLS]);
 
 int main()
 {
@@ -48,6 +49,30 @@ void runGame()
 		}
 		
 		getUserInput(xTurn,gameBoard);
+		
+		cout<<endl;
+		printCurrentBoard(gameBoard);
+		winner=getWinner(gameBoard);
+		
+		xTurn=!xTurn;
+		
+		if(winner=="" && isBoardFull(gameBoard))
+		{
+			winner="C";
+			
+		}
+		
+		cout<<endl;
+		
+		if(winner=="C")
+		{
+			cout<<"It was the Cat's game!!No winner"<<endl;
+		}else
+		{
+			cout<<"The winner is "<<winner<<endl;
+		}
+		
+		cout<<endl;
 	}
 }
 
