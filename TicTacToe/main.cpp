@@ -56,12 +56,12 @@ void runGame()
 		
 		xTurn=!xTurn;
 		
-		if(winner=="" && isBoardFull(gameBoard))
+		if(winner== "" && isBoardFull(gameBoard))
 		{
 			winner="C";
 			
 		}
-		
+	}
 		cout<<endl;
 		
 		if(winner=="C")
@@ -73,7 +73,6 @@ void runGame()
 		}
 		
 		cout<<endl;
-	}
 }
 
 
